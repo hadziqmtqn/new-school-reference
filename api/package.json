@@ -1,0 +1,16 @@
+{
+  "name": "new-school-reference-api",
+  "version": "1.0.0",
+  "description": "API and Migration Tools for School Reference",
+  "main": "index.js",
+  "scripts": {
+    "export:mysql": "node scripts/export-to-csv.js"
+  },
+  "dependencies": {
+    "mysql2": "^3.9.7",
+    "csv-writer": "^1.6.0",
+    "dotenv": "^16.4.5",
+    "pg": "^8.11.5",
+    "csv-parse": "^5.5.5"
+  }
+}
