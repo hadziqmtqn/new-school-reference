@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { Pool } = require('pg');
 const { parse } = require('csv-parse/sync');
-require('dotenv').config();
+require('dotenv').config({ path: path.join(__dirname, '../.env') });
 
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
