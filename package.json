@@ -2,16 +2,12 @@
   "name": "new-school-reference-monorepo",
   "version": "1.0.0",
   "private": true,
-  "workspaces": [
-    "api",
-    "frontend"
-  ],
   "scripts": {
-    "api:install": "npm install -w api",
-    "export:mysql": "npm run export:mysql -w api",
+    "api:install": "cd api && npm install",
+    "export:mysql": "cd api && npm run export:mysql",
     "import:neon": "node api/scripts/import-to-neon.js",
-    "dev": "concurrently \"npm run dev -w api\" \"npm run dev -w frontend\"",
-    "build": "npm run build -w frontend"
+    "dev": "concurrently \"cd api && npm run dev\" \"cd frontend && npm run dev\"",
+    "build": "cd frontend && npm install && npm run build"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
