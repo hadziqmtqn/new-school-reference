@@ -29,6 +29,13 @@ const endpoints = [
     },
     {
         method: 'GET',
+        path: '/api/form-of-education',
+        desc: 'Mengambil daftar jenjang pendidikan (SD, SMP, SMA, dll).',
+        params: [],
+        response: '[ { "id": 1, "name": "SD", "code": "SD" }, ... ]'
+    },
+    {
+        method: 'GET',
         path: '/api/schools',
         desc: 'Pencarian data sekolah dengan filter lengkap dan pagination.',
         params: [

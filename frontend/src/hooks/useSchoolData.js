@@ -32,7 +32,7 @@ export function useSchoolData() {
             try {
                 const [provRes, formRes] = await Promise.all([
                     axios.get(`${API_BASE}/provinces`),
-                    axios.get(`${API_BASE}/education-forms`)
+                    axios.get(`${API_BASE}/form-of-education`)
                 ]);
                 setProvinces(provRes.data);
                 setEduForms(formRes.data);

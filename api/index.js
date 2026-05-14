@@ -67,7 +67,7 @@ app.get('/api/villages', async (req, res) => {
 });
 
 // 5. Get Form of Education (School Groups)
-app.get('/api/education-forms', async (req, res) => {
+app.get('/api/form-of-education', async (req, res) => {
     try {
         const result = await pool.query('SELECT id, name, code FROM form_of_education ORDER BY name ASC');
         res.json(result.rows);
